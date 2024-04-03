@@ -33,11 +33,8 @@ def output_data():
             row = male_data[male_index]
             output_json.append({
                 'intra': row[0],
-                'first_name': row[1],
-                'last_name': row[2],
                 'level': float(row[3]) if row[3] != '' else None,
                 'gender': row[5],
-                'affiliation': row[6]
             })
             male_index += 1
     
@@ -52,11 +49,8 @@ def output_data():
             if row[0] not in [item['intra'] for item in output_json[-6:]]:
                 output_json.append({
                     'intra': row[0],
-                    'first_name': row[1],
-                    'last_name': row[2],
                     'level': float(row[3]) if row[3] != '' else None,
-                    'gender': row[5],
-                    'affiliation': row[6]
+                    'gender': row[5]
                 })
                 fill_index += 1
             else:
@@ -68,11 +62,8 @@ def output_data():
         row = female_data[female_index]
         output_json.append({
             'intra': row[0],
-            'first_name': row[1],
-            'last_name': row[2],
             'level': float(row[3]) if row[3] != '' else None,
-            'gender': row[5],
-            'affiliation': row[6]
+            'gender': row[5]
         })
         female_index += 1
     else:
@@ -80,11 +71,8 @@ def output_data():
         row = female_data[female_index]
         output_json.append({
             'intra': row[0],
-            'first_name': row[1],
-            'last_name': row[2],
             'level': float(row[3]) if row[3] != '' else None,
-            'gender': row[5],
-            'affiliation': row[6]
+            'gender': row[5]
         })
         female_index += 1
     
