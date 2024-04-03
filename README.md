@@ -15,14 +15,16 @@
 ## 使用方法
 
 1. `2024Q1_cleaning_list.csv` ファイルを用意します。以下の列を含むようにしてください:
-  - intra
-  - first_name
-  - last_name
-  - level
-  - gender
-  - affiliation
+- `login`: メンバーのイントラID
+- `first_name`: 名
+- `last_name`: 姓
+- `level`: レベル (浮動小数点数 または null)
+- `closed`: null
+- `gender`: 性別 ("male" または "female")
+- `campus_name`: 42 Tokyo
+- `groups_name`: ("" または "online")
 
-2. スクリプトを実行します:
+3. スクリプトを実行します:
 ```
 $ python generator.py
 ```
@@ -34,12 +36,7 @@ $ python generator.py
 出力はJSONフォーマットで行われます。各メンバーは以下の情報を含みます:
 
 - `login`: メンバーのイントラID
-- `first_name`: 名
-- `last_name`: 姓
-- `level`: レベル (浮動小数点数 または null)
-- `closed`: null
 - `gender`: 性別 ("male" または "female")
-- `campus_name`: 所属
 - `groups_name`: ("" または "online")
 
 例:
