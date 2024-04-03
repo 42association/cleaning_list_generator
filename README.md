@@ -33,12 +33,14 @@ $ python generator.py
 
 出力はJSONフォーマットで行われます。各メンバーは以下の情報を含みます:
 
-- `intra`: メンバーのイントラID
+- `login`: メンバーのイントラID
 - `first_name`: 名
 - `last_name`: 姓
 - `level`: レベル (浮動小数点数 または null)
+- `closed`: null
 - `gender`: 性別 ("male" または "female")
-- `affiliation`: 所属
+- `campus_name`: 所属
+- `groups_name`: ("" または "online")
 
 例:
 
