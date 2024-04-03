@@ -32,7 +32,7 @@ def output_data():
         if male_index < len(male_data):
             row = male_data[male_index]
             output_json.append({
-                'intra': row[0],
+                'login': row[0],
                 'level': float(row[3]) if row[3] != '' else None,
                 'gender': row[5],
             })
@@ -46,9 +46,9 @@ def output_data():
             if fill_index >= len(male_data):
                 fill_index = 0
             row = male_data[fill_index]
-            if row[0] not in [item['intra'] for item in output_json[-6:]]:
+            if row[0] not in [item['login'] for item in output_json[-6:]]:
                 output_json.append({
-                    'intra': row[0],
+                    'login': row[0],
                     'level': float(row[3]) if row[3] != '' else None,
                     'gender': row[5]
                 })
@@ -61,7 +61,7 @@ def output_data():
     if female_index < len(female_data):
         row = female_data[female_index]
         output_json.append({
-            'intra': row[0],
+            'login': row[0],
             'level': float(row[3]) if row[3] != '' else None,
             'gender': row[5]
         })
@@ -70,7 +70,7 @@ def output_data():
         female_index = 0
         row = female_data[female_index]
         output_json.append({
-            'intra': row[0],
+            'login': row[0],
             'level': float(row[3]) if row[3] != '' else None,
             'gender': row[5]
         })
@@ -91,9 +91,9 @@ while True:
         random.shuffle(male_data)
         
         # シャッフル後、前回の最後の出力グループのメンバーが先頭に来ないように調整
-        last_output_intra = [row['intra'] for row in last_output_group]
+        last_output_login = [row['login'] for row in last_output_group]
         for i in range(len(male_data)):
-            if male_data[i][0] not in last_output_intra:
+            if male_data[i][0] not in last_output_login:
                 male_data = male_data[i:] + male_data[:i]
                 break
         
