@@ -44,12 +44,9 @@ $ python generator.py
 ```json
 [
   {
-    "intra": "ymatsui",
-    "first_name": "yushi",
-    "last_name": "matsui",
+    "login": "ymatsui",
     "level": 100,
     "gender": "male",
-    "affiliation": "42 Tokyo"
   }
   ...
 ]
